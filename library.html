@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"><!-- Bootstrap styling CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Font Awesome Icons -->
+  <link rel="stylesheet" href="library_styling.css"><!-- Custom Styling-->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script><!-- jQuery CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script><!-- Bootstrap tether CDN-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script><!-- Bootstrap Javascript CDN-->
+  <script src="library.js"></script>
+
+  <title>Book Library</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-toggleable-lg">
+    <a class="navbar-brand">
+      <img src="rde-logo-small.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Book Library
+    </a>
+    <li class="nav-item navbar-toggler-right btn-group">
+      <a class="dropdown-toggle nav-link" type="text" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                User
+                </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <a class="dropdown-item" href="login.html">Logout</a>
+      </div>
+    </li>
+  </nav>
+  <div class="container">
+    <div class="card-block" id="cardBodyMain">
+      <div class="row">
+        <div class="input-group col-md-8 col-lg-6 col-xl-6">
+          <span class="input-group-addon" id="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span>
+          <input type="text" class="form-control" placeholder="Search by Title or Author" id="textSearch" aria-describedby="searchIcon">
+        </div>
+      </div>
+      <div class="row" id="cardRow">
+      </div>
+    </div>
+
+  </div>
+  <div class="modal fade" id="RatingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog model-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="col-12 modal-title text-center">Please rate this book!</h5>
+        </div>
+        <div class="modal-body d-flex justify-content-center">
+          <div class="star-rating">
+            <span class="fa fa-star-o" data-rating="1"></span>
+            <span class="fa fa-star-o" data-rating="2"></span>
+            <span class="fa fa-star-o" data-rating="3"></span>
+            <span class="fa fa-star-o" data-rating="4"></span>
+            <span class="fa fa-star-o" data-rating="5"></span>
+            <span class="rating-value"></span>
+          </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center flex-wrap">
+            <button type="button" class="btn btn-success col-7 col-sm-3 col-md-3 col-lg-3 col-xl-3" id="Submit">Submit</button>
+            <button type="button" class="btn btn-danger col-7 col-sm-3 col-md-3 col-lg-3 col-xl-3" id="Stop">Stop Asking!</button>
+            <button type="button" class="btn btn-primary col-7 col-sm-3 col-md-3 col-lg-3 col-xl-3" id="Later">Later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog model-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class=" col-12 modal-title text-center" id="modalTitle"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="bookmark d-flex">
+            <i class="fa fa-bookmark fa-2x d-flex justify-content-end" aria-hidden="true" id="bookmarkIcon"></i>
+          </div>
+          <div id="text">
+            <div id="loader"></div>
+          </div>
+        </div>
+        <div class=" row modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary col-4 col-sm-1 col-md-1 col-lg-1 col-xl-1 flex-last flex-sm-first flex-md-first fa fa-fast-backward" id="first"></button>
+          <button type="button" class="btn btn-primary col-3 col-sm-3 col-md-3 col-lg-2 col-xl-2 fa fa-chevron-left" id="back"></button>
+          <a>Page</a>
+          <button type="button" class="btn btn-primary col-3 col-sm-3 col-md-3 col-lg-2 col-xl-2 fa fa-chevron-right" id="forward"></button>
+          <button type="button" class="btn btn-primary col-4 col-sm-1 col-md-1 col-lg-1 col-xl-1 flex-last fa fa-fast-forward" id="last"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

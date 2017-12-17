@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+
+  <title>Login to RDE Books</title>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script><!-- jQuery CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script><!-- Bootstrap tether CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"><!-- Bootstrap styling CDN-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script><!-- Bootstrap Javascript CDN-->
+  <script src="login.js"></script>
+  <link rel="stylesheet" href="login_styling.css"><!-- Custom Styling-->
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header text-center">
+        <img src="rde-logo-small.png" class="d-inline-block align-top" alt="">
+        <h4>RDE Books</h4>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">Please sign in</h4>
+        <form class="form-signin">
+          <label for="inputName" class="sr-only">Username</label>
+          <input type="username" id="inputName" class="form-control" placeholder="Username" required autofocus>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer text-center">
+        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="submitLogin()">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="registerPage()">Register</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
